@@ -1,6 +1,6 @@
 ## Ejecucion de un programa por medio de MPI (Message Passing Interface)
 
-El desarrollo de este programa se realizo en base a (https://mpitutorial.com/)[MPI Tutorial]. En este sitio web se encuentra detalladamente la configuracion detallada del cluster en una LAN. 
+El desarrollo de este programa se realizo en base a [MPI Tutorial](https://mpitutorial.com/). En este sitio web se encuentra detalladamente la configuracion detallada del cluster en una LAN. 
 ### Requerimientos del sistema
 
 - Compilador g++
