@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <mpi.h>
 
-#define VECTOR_SIZE 100000000
+//#define VECTOR_SIZE 100
+//#define VECTOR_SIZE 1000000
+#define VECTOR_SIZE 10000000
 
 int main(int argc, char** argv) {
 	int rank, size;
@@ -23,6 +25,7 @@ int main(int argc, char** argv) {
 
 	// Tamaño del vector local para cada proceso
 	int local_size = VECTOR_SIZE / size;
+	if (rank == 0) printf("LOcal size for each process: %d \n", local_size);
 
 	// Inicialización de vectores locales y globales
 	int* local_vector_a = (int*)malloc(local_size * sizeof(int));
@@ -66,9 +69,8 @@ int main(int argc, char** argv) {
 	end_time = MPI_Wtime();
 
 	// Impresión de resultados y tiempo en el proceso 0
-	
 	if (rank == 0) {
-	/*
+	/*	
     	printf("Vector A: ");
     	for (int i = 0; i < VECTOR_SIZE; ++i) {
         	printf("%d ", global_vector_a[i]);
